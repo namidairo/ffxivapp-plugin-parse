@@ -31,8 +31,7 @@ namespace FFXIVAPP.Plugin.Parse.Converters
             var param = "DEFAULT";
             try
             {
-                param = ((Actor.Job) value).ToString()
-                                           .ToUpperInvariant();
+                if (value != null) param = Entity.Job[(byte) value];
             }
             catch (Exception ex)
             {

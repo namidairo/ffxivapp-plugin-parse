@@ -42,12 +42,12 @@ namespace FFXIVAPP.Plugin.Parse.Converters
         {
             try
             {
-                return GetIcon((Actor.Job) value);
+                return GetIcon(Entity.Job[(byte) value]);
             }
             catch (InvalidCastException ex)
             {
                 Logger.Error("Failed to convert job to job icon", ex);
-                return GetIcon(Actor.Job.Unknown);
+                return GetIcon("Unknown");
             }
         }
 
@@ -56,7 +56,7 @@ namespace FFXIVAPP.Plugin.Parse.Converters
             throw new NotImplementedException();
         }
 
-        private BitmapImage GetIcon(Actor.Job job)
+        private BitmapImage GetIcon(string job)
         {
             var path = new Uri(Path.Combine(BasePath, job + ".png"));
             return new BitmapImage(path);

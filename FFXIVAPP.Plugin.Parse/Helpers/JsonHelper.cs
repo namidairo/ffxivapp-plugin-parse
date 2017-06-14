@@ -143,25 +143,20 @@ namespace FFXIVAPP.Plugin.Parse.Helpers
                 if (XIVInfoViewModel.Instance.CurrentUser != null)
                 {
                     var mapIndex = XIVInfoViewModel.Instance.CurrentUser.MapIndex;
-                    zone = ZoneHelper.GetMapInfo(mapIndex)
-                                     .English;
+                    zone = ZoneHelper.MapInfo(mapIndex).Name.English;
                     switch (Constants.GameLanguage)
                     {
                         case "French":
-                            zone = ZoneHelper.GetMapInfo(mapIndex)
-                                             .French;
+                            zone = ZoneHelper.MapInfo(mapIndex).Name.French;
                             break;
                         case "Japanese":
-                            zone = ZoneHelper.GetMapInfo(mapIndex)
-                                             .Japanese;
+                            zone = ZoneHelper.MapInfo(mapIndex).Name.Japanese;
                             break;
                         case "German":
-                            zone = ZoneHelper.GetMapInfo(mapIndex)
-                                             .German;
+                            zone = ZoneHelper.MapInfo(mapIndex).Name.German;
                             break;
                         case "Chinese":
-                            zone = ZoneHelper.GetMapInfo(mapIndex)
-                                             .Chinese;
+                            zone = ZoneHelper.MapInfo(mapIndex).Name.Chinese;
                             break;
                     }
                 }

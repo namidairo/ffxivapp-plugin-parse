@@ -90,7 +90,7 @@ namespace FFXIVAPP.Plugin.Parse.Models
             }
         }
 
-        public Actor.Job Job { get; set; }
+        public string Job { get; set; }
         public double CombinedDPS { get; set; }
         public double DPS { get; set; }
         public double DOTPS { get; set; }

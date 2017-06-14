@@ -24,7 +24,7 @@ namespace FFXIVAPP.Plugin.Parse.Interfaces
     {
         PlayerType Type { get; set; }
         string Name { get; set; }
-        Actor.Job Job { get; set; }
+        string Job { get; set; }
         double CombinedDPS { get; set; }
         double DPS { get; set; }
         double DOTPS { get; set; }

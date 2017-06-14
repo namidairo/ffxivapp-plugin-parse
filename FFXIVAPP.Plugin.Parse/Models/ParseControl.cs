@@ -79,7 +79,7 @@ namespace FFXIVAPP.Plugin.Parse.Models
                             var playerEntity = new PlayerEntity
                             {
                                 Name = player.Name,
-                                Job = Actor.Job.Unknown,
+                                Job = "Unknown",
                                 CombinedDPS = (double) player.GetStatValue("CombinedDPS"),
                                 DPS = (double) player.GetStatValue("DPS"),
                                 DOTPS = (double) player.GetStatValue("DOTPS"),

@@ -163,7 +163,7 @@ namespace FFXIVAPP.Plugin.Parse.Utilities
                                                      .Value;
                         if (source != null)
                         {
-                            multiplier = source.Job == Actor.Job.WHM ? 0.18m : multiplier;
+                            multiplier = source.Job == "WHM" ? 0.18m : multiplier;
                         }
                     }
                     catch (Exception ex)
